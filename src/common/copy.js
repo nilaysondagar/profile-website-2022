@@ -315,7 +315,7 @@ export default {
                 articles that preview the future of web development! Unfortunately, some of the projects 
                 I've worked on are not publicly available, so I'm unable to showcase them or their code 
                 here. Some of the other projects I've worked on are a Chrome extension for managing bill 
-                payments, a banking portal companion app that allows for invoice capture, bill management,
+                payments, and a banking portal companion app that allows for invoice capture, bill management,
                 payment history, and transaction reporting.
             `,
             fr: `
@@ -329,7 +329,7 @@ export default {
                 des articles qui préfigurent l'avenir du développement web ! Malheureusement, certains projets
                 sur lesquels j'ai travaillé ne sont pas accessibles au public, je ne peux donc pas les présenter ni leur code
                 ici. Certains des autres projets sur lesquels j'ai travaillé sont une extension Chrome pour la gestion des factures
-                paiements, une application compagnon de portail bancaire qui permet la capture de factures, la gestion des factures,
+                paiements, et une application compagnon de portail bancaire qui permet la capture de factures, la gestion des factures,
                 l'historique des paiements et les rapports sur les transactions.
             `,
         },
