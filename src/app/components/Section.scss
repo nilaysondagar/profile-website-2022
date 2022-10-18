@@ -1,0 +1,21 @@
+@import '../../themes/constants.scss';
+
+.portfolio-section {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    padding: 20px 40px;
+    transition: 0.2s ease;
+
+    .section-content {
+        min-height: 400px;
+    }
+
+    &:nth-child(even) {
+        background-color: var(--background);
+    }
+
+    &:nth-child(odd) {
+        background-color: var(--backgroundSecondary);
+    }
+}

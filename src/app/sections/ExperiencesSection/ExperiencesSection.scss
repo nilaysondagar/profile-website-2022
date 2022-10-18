@@ -1,0 +1,97 @@
+@import '../../../themes/constants.scss';
+
+.experiences-section {
+    position: relative;
+    padding: 80px 0 40px;
+    overflow: hidden;
+
+    .section-content {
+        display: grid;
+        width: 100%;
+        grid-template-columns: minmax(0, 2fr) minmax(0, 5fr);
+        column-gap: 32px;
+        align-items: center;
+
+        .image-wrapper {
+            display: flex;
+            width: 85%;
+            aspect-ratio: 1;
+
+            .experiences-image {
+                aspect-ratio: 1;
+                width: 100%;
+                height: 0;
+                min-height: 100%;
+                justify-self: center;
+                margin-left: 80px;
+            }
+        }
+
+        .experiences-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-right: 80px;
+
+            .body-text {
+                margin-top: 16px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        padding-top: 0;
+
+        .section-content {
+            .image-wrapper {
+                width: auto;
+                grid-column: 1 / -1;
+                grid-row: 1;
+                justify-self: center;
+
+                .experiences-image {
+                    height: auto;
+                    margin-left: 0;
+                    max-width: 400px;
+                }
+            }
+
+            .experiences-text {
+                grid-column: 1 / -1;
+                margin-left: 80px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: $mobile-breakpoint) {
+        padding: 20px 40px;
+
+        .section-content {
+            grid-template-columns: 1fr;
+
+            .experiences-image {
+                grid-column: auto;
+                max-width: 100%;
+                margin-left: 0;
+                grid-row: 1;
+            }
+
+            .experiences-text {
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 1920px) {
+        max-height: 875px;
+
+        .section-content {
+            .experiences-image {
+                max-height: 550px;
+                max-width: 550px;
+            }
+        }
+    }
+}

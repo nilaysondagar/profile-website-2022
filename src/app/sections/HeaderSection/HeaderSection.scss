@@ -1,0 +1,64 @@
+@import '../../../themes/constants.scss';
+
+.header-section {
+    position: relative;
+    padding: 20px 0 20px 80px;
+    overflow: hidden;
+
+    .section-content {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 3fr 2fr;
+        column-gap: 20px;
+        align-items: center;
+
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .body-text {
+                margin-top: 16px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .header-image {
+            aspect-ratio: 1;
+            max-width: 80%;
+            max-height: 80%;
+            justify-self: center;
+        }
+    }
+
+    @media only screen and (max-width: $mobile-breakpoint) {
+        padding: 20px 40px;
+
+        .section-content {
+            grid-template-columns: 1fr;
+
+            .header-image {
+                grid-row: 1;
+            }
+
+            .header-text {
+                margin-bottom: 40px;
+
+                .header-button {
+                    align-self: stretch;
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 1920px) {
+        max-height: 625px;
+
+        .section-content {
+            .header-image {
+                max-height: 550px;
+                max-width: 550px;
+            }
+        }
+    }
+}

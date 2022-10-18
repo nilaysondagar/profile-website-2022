@@ -1,0 +1,86 @@
+.toggle-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: 8px;
+        padding: 6px;
+        border-radius: 100px;
+        background-color: var(--backgroundSecondary);
+        cursor: pointer;
+        border: none;
+
+        .toggle-item {
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 4px 12px 4px 8px;
+
+            .toggle-item-icon {
+                margin-right: 4px;
+                transform-origin: right center;
+                transform: translateX(8px) scale(0);
+                transition: 0.3s ease;
+                z-index: 1;
+            }
+
+            .toggle-item-label {
+                color: var(--textBody);
+                z-index: 1;
+                transform: translateX(-8px);
+                transition: all 0.3s ease, background-color 0s ease;
+            }
+
+            &.right {
+                justify-content: flex-end;
+                padding: 4px 8px 4px 12px;
+
+                .toggle-item-icon {
+                    margin-right: 0;
+                    margin-left: 4px;
+                    filter: opacity(0);
+                    transform: translateX(-8px) scale(0);
+                    transition: all 0.3s ease, background-color 0s ease;
+                }
+
+                .toggle-item-label {
+                    transform: translateX(8px);
+                }
+            }
+
+            &.selected {
+                .toggle-item-icon {
+                    color: var(--background);
+                    transform-origin: left center;
+                    filter: opacity(1);
+                    transform: translateX(0) scale(1);
+                    background-color: var(--tertiaryButton);
+                    transition: all 0.3s ease, background-color 0.3s ease 0.3s;
+                }
+
+                .toggle-item-label {
+                    color: var(--background);
+                    transform: translateX(0);
+                    background-color: var(--tertiaryButton);
+                    transition: all 0.3s ease, background-color 0.3s ease 0.3s;
+                }
+            }
+
+            .slider {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                padding: 8px;
+                color: var(--textBody);
+                background-color: var(--tertiaryButton);
+            }
+        }
+    }
+}

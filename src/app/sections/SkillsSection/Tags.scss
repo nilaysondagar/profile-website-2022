@@ -1,0 +1,48 @@
+.skill-tag {
+    position: absolute;
+    display: flex;
+    height: 28px;
+    max-width: 28px;
+    min-width: 28px;
+    bottom: 8px;
+    left: calc(100% - 32px);
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4px 4px 4px 2px;
+    border-radius: 100px;
+    background-color: var(--secondaryTinted);
+    border: solid 2px var(--background);
+    overflow: hidden;
+    z-index: 1;
+    transition: max-width 0.4s ease, z-index 0.4s cubic-bezier(0, 1, 1, 0);
+
+    .card-tag-icon {
+        font-size: 20px;
+        color: var(--textBody);
+        margin-right: 4px;
+    }
+
+    .card-tag-label {
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-right: 4px;
+    }
+
+    &:nth-of-type(1) {
+        &:hover {
+            z-index: 3;
+        }
+    }
+
+    &:nth-of-type(2) {
+        left: calc(100% - 12px);
+    }
+
+    &:hover,
+    &:focus {
+        max-width: 160px;
+        border: solid 2px var(--background);
+        z-index: 2;
+        transition: max-width 0.4s ease, z-index 0s;
+    }
+}

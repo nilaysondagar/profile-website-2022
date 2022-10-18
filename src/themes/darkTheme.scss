@@ -1,0 +1,42 @@
+// Palette
+.dark-theme {
+    --primary: hsl(147, 50%, 45%);
+    --primaryLight: hsl(147, 50%, 35%);
+    --secondary: hsl(188, 50%, 75%);
+    --secondaryTinted: hsl(188, 35%, 37%);
+    --tertiary: hsl(234, 60%, 75%);
+    --tertiaryDark: hsl(234, 45%, 65%);
+
+    --clickableIconColor: hsl(219, 19%, 80%);
+    --clickableIconBackground: hsla(147, 50%, 45%, 0.2);
+
+    --background: hsl(255, 4%, 18%);
+    --backgroundSecondary: hsl(260, 7%, 25%);
+    --backgroundTertiary: hsl(188, 20%, 10%);
+
+    --textBody: hsl(0, 0%, 96%);
+
+    --actionButton: hsl(166, 100%, 24%);
+    --actionButtonHover: hsl(188, 60%, 34%);
+    --secondaryButton: hsl(354, 70%, 70%);
+    --secondaryButtonHover: hsl(188, 60%, 34%);
+    --tertiaryButton: hsl(234, 60%, 75%);
+    --tertiaryButtonHover: hsl(188, 60%, 34%);
+
+    --link: hsl(234, 60%, 75%);
+
+    --boxShadow: hsl(0, 0%, 90%);
+
+    --scrollShadowStart: hsla(0, 0%, 100%, 0);
+    --scrollShadowEnd: hsla(0, 0%, 100%, 0.5);
+    --scrollShadowEndSecondary: hsla(260, 7%, 45%, 0.7);
+
+    --popupBackground: hsla(0, 0%, 0%, 0.6);
+
+    --cardIcon: hsl(0, 0%, 96%);
+
+    --info: hsla(224, 89%, 69%);
+    --infoBackground: hsla(224, 89%, 69%, 0.15);
+}
+
+// Overrides

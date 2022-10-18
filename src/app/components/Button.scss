@@ -1,0 +1,121 @@
+.button {
+    // Reset button
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+
+    position: relative;
+    display: flex;
+    text-transform: capitalize;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 28px;
+    margin: 2px;
+    color: var(--textBody);
+    cursor: pointer;
+
+    .button-label {
+        font-weight: 600;
+        transition: color 0.1s ease, transform 0.2s ease;
+        z-index: 1;
+    }
+
+    .button-icon {
+        font-size: 22px;
+        transition: 0.1s ease;
+        z-index: 1;
+
+        &.left {
+            margin-right: 4px;
+        }
+
+        &.right {
+            margin-left: 4px;
+        }
+    }
+
+    &.action {
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            transition: 0.2s ease;
+            transform-origin: center center;
+            border-radius: 2px;
+        }
+    }
+
+    &.secondary {
+        &::before {
+            position: absolute;
+            content: '';
+            width: calc(100% - 2px);
+            height: calc(100% - 2px);
+            transition: 0.2s ease;
+            transform-origin: center center;
+            border-radius: 2px;
+        }
+    }
+
+    &.action {
+        &::before {
+            background-color: var(--actionButton);
+        }
+
+        &:hover {
+            &::before {
+                background-color: var(--actionButtonHover);
+                transform: scale(1.02);
+            }
+        }
+
+        &:active {
+            &::before {
+                filter: brightness(0.9);
+            }
+        }
+    }
+
+    &.secondary {
+        color: var(--secondaryButton);
+
+        &::before {
+            border: solid 2px var(--secondaryButton);
+        }
+
+        &:hover {
+            color: var(--secondaryButtonHover);
+
+            &::before {
+                border-color: var(--secondaryButtonHover);
+                transform: scale(1.02);
+            }
+        }
+
+        &:active {
+            &::before {
+                filter: brightness(0.9);
+            }
+        }
+    }
+
+    &.tertiary {
+        color: var(--tertiaryButton);
+
+        &:hover {
+            color: var(--tertiaryButtonHover);
+
+            &.with-icon {
+                .button-label {
+                    transform: translateX(2px);
+                }
+            }
+        }
+
+        &:active {
+            filter: brightness(0.9);
+        }
+    }
+}

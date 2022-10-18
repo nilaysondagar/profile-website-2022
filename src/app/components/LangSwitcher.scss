@@ -1,0 +1,48 @@
+.lang-switcher {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, max-content) 40px;
+    grid-template-rows: 1fr;
+    align-items: center;
+    column-gap: 16px;
+    width: 170px;
+    right: -12px;
+    top: 140px;
+    padding: 16px;
+    border-radius: 100px;
+    background-color: var(--actionButton);
+    transform: translateX(60%);
+    transition: 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+
+    .lang-icon {
+        grid-column: 1;
+        grid-row: 1;
+        transform: translateY(30px);
+        filter: opacity(0);
+        transition: color 0.1s ease, transform 0.3s ease, filter 0.2s ease;
+
+        &.visible {
+            transform: translateY(0);
+            filter: opacity(1);
+        }
+    }
+
+    .lang-name {
+        font-weight: bold;
+        white-space: nowrap;
+        transition: transform 0.2s ease, color 0.1s ease;
+    }
+
+    &:focus,
+    &:hover {
+        background-color: var(--actionButtonHover);
+        transform: translateX(12px);
+
+        .lang-name {
+            transform: translateX(-6px);
+        }
+    }
+}

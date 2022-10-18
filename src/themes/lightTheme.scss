@@ -1,0 +1,43 @@
+// Palette
+:root {
+    --primary: hsl(147, 70%, 55%);
+    --primaryLight: hsl(147, 60%, 75%);
+    --secondary: hsl(188, 60%, 75%);
+    --secondaryTinted: hsl(188, 60%, 90%);
+    --tertiary: hsl(234, 23%, 47%);
+    --tertiaryDark: hsl(234, 45%, 80%);
+
+    --clickableIconColor: hsl(219, 19%, 60%);
+    --clickableIconBackground: hsla(147, 56%, 11%, 0.1);
+
+    --background: hsl(0, 0%, 100%);
+    --backgroundSecondary: hsl(189, 70%, 92%);
+    --backgroundTertiary: hsl(188, 90%, 90%);
+
+    --textBody: hsl(220, 60%, 12%);
+    --textBodySecondary: hsl(0, 0%, 96%);
+
+    --actionButton: hsl(147, 70%, 55%);
+    --actionButtonHover: hsl(188, 60%, 75%);
+    --secondaryButton: hsl(147, 70%, 55%);
+    --secondaryButtonHover: hsl(188, 60%, 75%);
+    --tertiaryButton: hsl(234, 23%, 47%);
+    --tertiaryButtonHover: hsl(188, 60%, 75%);
+
+    --link: hsl(234, 23%, 47%);
+
+    --boxShadow: hsl(0, 0%, 80%);
+
+    --scrollShadowStart: hsla(0, 0%, 0%, 0);
+    --scrollShadowEnd: hsla(0, 0%, 0%, 0.2);
+    --scrollShadowEndSecondary: hsla(189, 70%, 70%, 0.8);
+
+    --popupBackground: hsla(0, 0%, 0%, 0.3);
+
+    --cardIcon: hsl(220, 60%, 12%);
+
+    --info: hsla(224, 89%, 69%);
+    --infoBackground: hsla(224, 89%, 69%, 0.15);
+}
+
+// Overrides

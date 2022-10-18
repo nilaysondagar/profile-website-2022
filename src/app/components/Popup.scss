@@ -1,0 +1,57 @@
+@import '../../themes/constants.scss';
+
+.popup-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    pointer-events: auto;
+    background-color: var(--popupBackground);
+
+    &.hidden {
+        pointer-events: none;
+    }
+
+    .popup-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: 40vw;
+        max-height: 90vh;
+        padding: 40px 40px 20px;
+        border-radius: 4px;
+        box-shadow: var(--boxShadow);
+        background-color: var(--background);
+        transition: all 0s ease;
+
+        .close-button {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+        }
+
+        @media only screen and (max-width: 1400px) {
+            max-width: 80vw;
+            max-height: 90vh;
+        }
+    }
+
+    @media only screen and (max-width: $mobile-breakpoint) {
+        justify-content: flex-start;
+
+        .popup-content {
+            max-width: 100vw;
+            max-height: 100vh;
+            width: 100vw;
+            height: 100vh;
+            height: 100dvh;
+            padding: 40px 20px 20px;
+        }
+    }
+}

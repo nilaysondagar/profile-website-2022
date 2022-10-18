@@ -1,0 +1,214 @@
+@import '../../../themes/constants.scss';
+
+.time-line-wrapper {
+    grid-column: 1 / -1;
+    overflow-x: auto;
+
+    .time-line-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin: 20px 120px 40px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            top: calc(50% - 2px);
+            background-color: var(--primary);
+        }
+
+        .time-line-item {
+            display: flex;
+            width: 50%;
+            text-align: center;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 6px;
+            cursor: pointer;
+
+            .time-line-item-content {
+                position: relative;
+                max-width: 140px;
+                display: flex;
+                flex-direction: column;
+                margin-left: 40px;
+
+                .title {
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+
+                .date {
+                    font-size: 12px;
+                    font-style: italic;
+                }
+            }
+
+            .event-marker {
+                position: absolute;
+                height: 20px;
+                width: 20px;
+                top: calc(50% - 10px);
+                margin-right: -40px;
+                background-color: var(--backgroundSecondary);
+                border: 3px solid var(--primary);
+                border-radius: 100px;
+                z-index: 1;
+                transition: 0.2s ease;
+                cursor: pointer;
+            }
+
+            &:nth-child(1) {
+                .time-line-item-content {
+                    margin-left: -180px;
+                }
+
+                .event-marker {
+                    left: 0;
+                    background-color: var(--primary);
+                }
+            }
+
+            &:nth-child(even) {
+                .time-line-item-content {
+                    margin-top: 80px;
+                }
+            }
+
+            &:nth-child(odd) {
+                .time-line-item-content {
+                    margin-bottom: 100px;
+                }
+            }
+
+            &:last-child {
+                .time-line-item-content {
+                    margin-right: -160px;
+                }
+
+                .event-marker {
+                    right: 40px;
+                    background-color: var(--primary);
+                }
+            }
+
+            &:hover {
+                .event-marker {
+                    transform: scale(1.4);
+                }
+            }
+
+            &:active {
+                .event-marker {
+                    transform: scale(0.9);
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: $mobile-breakpoint) {
+        padding: 40px 0;
+
+        .time-line-container {
+            min-width: 0 !important;
+            flex-direction: column;
+            margin: 0;
+
+            &::after {
+                width: 4px;
+                height: 100%;
+                left: calc(50% - 2px);
+                top: auto;
+            }
+
+            .time-line-item {
+                margin-top: 60px;
+
+                .time-line-item-content {
+                    min-width: 120px;
+                }
+
+                .event-marker {
+                    top: auto;
+                    margin-right: 0;
+                }
+
+                &:nth-child(1) {
+                    margin-top: -10px;
+                    margin-right: -40px;
+
+                    .time-line-item-content {
+                        margin-left: -0;
+                    }
+
+                    .event-marker {
+                        top: 0;
+                        left: auto;
+                        margin-left: -40px;
+                    }
+                }
+
+                &:nth-child(even) {
+                    .time-line-item-content {
+                        text-align: start;
+                        margin-left: 180px;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                    }
+                }
+
+                &:nth-child(odd) {
+                    .time-line-item-content {
+                        text-align: end;
+                        margin-right: 220px;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                    }
+                }
+
+                &:last-child {
+                    .time-line-item-content {
+                        margin-bottom: -10px;
+                        margin-right: 0;
+                    }
+
+                    .event-marker {
+                        top: auto;
+                        bottom: 0;
+                        right: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Scroll shadows (cover top, cover bottom, top, bottom) */
+    background: linear-gradient(
+            90deg,
+            var(--backgroundSecondary) 30%,
+            var(--scrollShadowStart)
+        ),
+        linear-gradient(
+            90deg,
+            var(--scrollShadowStart),
+            var(--backgroundSecondary) 70%
+        ),
+        radial-gradient(
+            farthest-side at 0% 50%,
+            var(--scrollShadowEndSecondary),
+            var(--scrollShadowStart)
+        ),
+        radial-gradient(
+            farthest-side at 100% 50%,
+            var(--scrollShadowEndSecondary),
+            var(--scrollShadowStart)
+        );
+    background-repeat: no-repeat;
+    background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+    background-position-x: left, right, left, right;
+    background-position-y: center, center, center, center;
+    background-attachment: local, local, scroll, scroll;
+}

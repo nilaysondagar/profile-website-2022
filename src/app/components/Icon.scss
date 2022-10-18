@@ -1,0 +1,47 @@
+.ns-icon {
+    user-select: none;
+    transition: 0.2s ease;
+
+    &.clickable,
+    &.click-hover {
+        position: relative;
+        color: var(--clickableIconColor);
+        padding: 2px;
+        border-radius: 100px;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--clickableIconBackground);
+            aspect-ratio: 1;
+            border-radius: 100px;
+            transform-origin: center;
+            transition: 0.2s ease;
+            transform: scale(0);
+            filter: opacity(0);
+        }
+
+        &:hover {
+            color: var(--primary);
+
+            &::before {
+                transform: scale(1);
+                filter: opacity(1);
+            }
+        }
+    }
+
+    &.click-hover {
+        color: var(--primary);
+
+        &::before {
+            transform: scale(1);
+            filter: opacity(1);
+        }
+    }
+}
