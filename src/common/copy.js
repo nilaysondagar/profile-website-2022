@@ -90,8 +90,8 @@ export default {
             },
             universityEss: {
                 title: {
-                    en: 'Director of IT at UVic',
-                    fr: 'Directeur informatique chez UVic',
+                    en: 'Student Director of IT at UVic',
+                    fr: "Directeur étudiant de IT à l'UVic",
                 },
             },
             universityStart: {
